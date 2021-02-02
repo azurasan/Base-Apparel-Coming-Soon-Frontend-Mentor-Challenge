@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.brand {
+    margin: 2rem 0;
+    margin-left: -8rem;
+}
+
+.left {
+    text-align: center;
+}
+
+.left h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    padding: 3rem 0 1.5rem 0;
+}
+
+.left span {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.left p {
+    padding: 0 1rem;
+    color: hsl(0, 36%, 70%);
+    padding-bottom: 2rem;
+}
+
+.left form {
+    position: relative;
+}
+
+.left input {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid hsl(0, 36%, 70%);
+    border-radius: 1.5rem;
+    outline: none;
+}
+
+.left .icon-error {
+    visibility: hidden;
+}
+
+.left .icon-error.active {
+    visibility: visible;
+    transform: translate(-5rem, 0.3rem);
+}
+
+.left input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+.left .warning {
+    color: hsl(0, 93%, 68%);
+    visibility: hidden;
+}
+
+.left .warning.active {
+    visibility: visible;
+}
+
+.left button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transform: translateX(-2rem);
+    cursor: pointer;
+}
+
+.left button img {
+    align-self: center;
+}
+
+.right {
+    display: none;
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 93%, 68%);
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        width: 70%;
+        display: flex;
+        background-color: white;
+        box-shadow: 1px 5px 3px 3px rgba(0, 0, 0, .3);
+    }
+
+    .hero-mobile {
+        display: none;
+    }
+
+    .left {
+        flex: 1;
+        text-align: left;
+        padding: 3rem 5rem;
+    }
+
+    .left h1 {
+        width: 50%;
+    }
+
+    .brand {
+        margin: 0 0 2.5rem 0;
+    }
+
+    .left h1 {
+        padding: 1.5rem 0;
+    }
+
+    .left p {
+        padding: 0;
+        margin: -1rem 0 2rem 0;
+    }
+
+    .left button {
+        transform: translateX(-5rem);
+    }
+
+    .left .warning.active{
+        transform: translate(1rem,1.3rem);
+    }
+
+    .left .icon-error.active {
+        visibility: visible;
+        transform: translate(-6rem,0.3rem);
+    }
+
+    .right {
+        display: block;
+        flex: 1;
+        background-image: url(images/hero-desktop.jpg);
+        background-size: cover;
+    }
+}
