@@ -15,6 +15,11 @@
     text-align: center;
 }
 
+.hero-mobile{
+    width: 100%;
+    height: auto;
+}
+
 .left h1 {
     text-transform: uppercase;
     font-size: 3em;
